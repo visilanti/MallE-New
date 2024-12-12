@@ -276,7 +276,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   image: {
-    width: 165,
+    width: 150,
     height: 150,
     borderRadius: 8,
     marginBottom: 8,

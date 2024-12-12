@@ -15,7 +15,7 @@ import Payment from './src/screens/Payment';
 import Home from './src/screens/Home';
 import AddCollection from './src/screens/AddCollection';
 import MyStore from './src/screens/MyStore';
-import OrderDetail from './src/screens/OrderDetails';
+import OrderDetail from './src/screens/OrderDetails/OrderDetails';
 
 const Stack = createNativeStackNavigator();
 

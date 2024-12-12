@@ -62,11 +62,11 @@ const SettingUser = ({ navigation }) => {
          setUserData(userData);
 
          // Mengatur gambar profil dengan URL Cloudinary jika ada
-         setProfileImage({
-           uri: userData.image && userData.image.length > 0
-             ? userData.image[0] // Gambar dari Cloudinary
-             : require('../assets/images/avatar.png'), // Gambar default
-         });
+          if (userData.image && userData.image.length > 0) {
+             setProfileImage({ uri: userData.image[0] }); // Remote image
+           } else {
+             setProfileImage(require('../assets/images/avatar.png')); // Default local image
+           }
        } catch (error) {
          console.error('Error fetching user data:', error.message);
        }

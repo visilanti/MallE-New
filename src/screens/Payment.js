@@ -47,7 +47,7 @@ const CheckoutScreen = ({ route, navigation }) => {
 
       if (response.ok) {
         Alert.alert('Success', 'Your transaction has been created successfully!');
-//        navigation.replace('TransactionSuccessScreen'); // Arahkan ke halaman success
+        navigation.replace('OrderDetail');
       } else {
         console.error(result);
         Alert.alert('Error', 'Failed to create transaction. Please try again.');
