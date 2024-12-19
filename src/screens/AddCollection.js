@@ -10,7 +10,7 @@ import {
   KeyboardAvoidingView, // TAMBAH INI
   Alert,
 } from 'react-native';
-import {Dropdown} from 'react-native-element-dropdown'; // TAMBAH INI (YG DROPDOWN PICKER HAPUS AJA)
+import {Dropdown} from 'react-native-element-dropdown';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import {launchImageLibrary} from 'react-native-image-picker'; // TAMBAH INI
 import axios from 'axios';
@@ -139,7 +139,7 @@ const AddCollectionScreen = ({navigation}) => {
       }
 
       console.log('Uploading data:', formData);
-      const response = await axios.post('http://192.168.43.251:4000/api/products/', formData, {
+      const response = await axios.post('https://backend-malle.vercel.app/api/products/', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${userToken}`, // Kirim userToken dalam header
@@ -422,20 +422,20 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 8, // TAMBAH INI
   },
-
-  // HAPUS dropDownContainerStyle & listItemLabel
-
   dropdownText: {
     fontSize: 14,
-    color: '#333',
+    color: '#000',
     textAlign: 'right',
     marginRight: 8,
   },
-
-  // TAMBAH itemContainer
+    placeholderText: {
+      fontSize: 14,
+      color: '#000', // Pastikan teks placeholder berwarna hitam
+    },
   itemContainer: {
     paddingVertical: 10,
     paddingHorizontal: 16,
+    color: '#000',
     backgroundColor: '#fff',
     borderBottomWidth: 1,
     borderColor: '#ddd',

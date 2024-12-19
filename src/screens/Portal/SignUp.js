@@ -11,7 +11,7 @@ import {
   ScrollView,
   Alert,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome6';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import { fonts } from '../../assets/fonts';
 import { FIREBASE_AUTH } from '../../../FirebaseConfig'; // Import Firebase config
 import { createUserWithEmailAndPassword } from 'firebase/auth'; // Import function to create users
@@ -47,7 +47,7 @@ const SignUp = ({ navigation }) => {
       // Mengirimkan data ke API
       try {
         const response = await axios.post(
-          'http://192.168.43.251:4000/api/users/',
+          'https://backend-malle.vercel.app/api/users/',
           { email: user.email },
           {
             headers: {

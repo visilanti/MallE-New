@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "240332207310",
+    "firebase_url": "https://malle-2df87-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "malle-2df87",
+    "storage_bucket": "malle-2df87.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240332207310:android:76f753d559a9c177180c9f",
+        "android_client_info": {
+          "package_name": "com.malle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "240332207310-iqhmu255b4fvmqav6o41tof24bb5a6ic.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.malle",
+            "certificate_hash": "3980461b76cf1adca8bfee1218de7c6ef70a7365"
+          }
+        },
+        {
+          "client_id": "240332207310-fde0hfomn18k39ll5kh30q5o65dcikdu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNZu8Mon_IJRNSMAzo3K1bhxpobQPfl5A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "240332207310-fde0hfomn18k39ll5kh30q5o65dcikdu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

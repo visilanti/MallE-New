@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome6';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 import { fonts } from '../assets/fonts';
@@ -36,7 +36,7 @@ const MyStore = ({ navigation }) => {
       if (!userToken) throw new Error('User token not found');
       console.log("Token:", userToken); // Debug
 
-      const response = await axios.get('http://192.168.43.251:4000/api/products/my-store/', {
+      const response = await axios.get('https://backend-malle.vercel.app/api/products/my-store/', {
         headers: {
           Authorization: `Bearer ${userToken}`,
         },

@@ -11,7 +11,7 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Octicons';
-import Icons from 'react-native-vector-icons/FontAwesome6';
+import Icons from 'react-native-vector-icons/FontAwesome';
 
 const generateRatingStars = stars => {
   const fullStars = Math.floor(stars);
@@ -31,7 +31,7 @@ const Home = ({ navigation }) => {
   // Fetch data from API
   const fetchData = async () => {
     try {
-      const response = await fetch('http://192.168.43.251:4000/api/products/'); // Replace with your API URL
+      const response = await fetch('https://backend-malle.vercel.app/api/products/'); // Replace with your API URL
       const result = await response.json();
       setData(result);
       setLoading(false);
@@ -111,7 +111,7 @@ const Home = ({ navigation }) => {
       {/* Search Bar */}
       <View style={styles.searchContainer}>
         <TouchableOpacity style={{ paddingHorizontal: 10 }}>
-          <Icons name="magnifying-glass" size={20} color="#BBBBBB" />
+          <Icons name="search" size={20} color="#BBBBBB" />
         </TouchableOpacity>
         <TextInput
           style={styles.searchBar}
@@ -166,27 +166,21 @@ const Home = ({ navigation }) => {
       {/* Footer */}
       <View style={styles.footer}>
         <TouchableOpacity style={styles.footerButton}>
-          <Icon name="home" size={20} color="#3CC7F5" />
+          <Icons name="home" size={24} color="#3CC7F5" />
           <Text style={[styles.footerButtonText, styles.active]}>Home</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.footerButton}
           onPress={() => navigation.navigate('AddCollection')}>
-          <Image
-            source={require('../assets/images/shop.png')}
-            style={styles.icon}
-          />
+          <Icons name="shopping-cart" size={24} color="#3E3E40" />
           <Text style={[styles.footerButtonText]}>Shop</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.footerButton}
           onPress={() => navigation.navigate('ProfileDetails')}>
-          <Image
-            source={require('../assets/images/settings.png')}
-            style={styles.icon}
-          />
+          <Icons name="gear" size={24} color="#3E3E40" />
           <Text style={styles.footerButtonText}>Setting</Text>
         </TouchableOpacity>
       </View>

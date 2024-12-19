@@ -22,7 +22,7 @@ const MyStoreTab = ({ navigation }) => {
   const fetchData = async () => {
     try {
       const userToken = await AsyncStorage.getItem('userToken');
-      const response = await axios.get('http://192.168.43.251:4000/api/products/my-store/', {
+      const response = await axios.get('https://backend-malle.vercel.app/api/products/my-store/', {
         headers: { Authorization: `Bearer ${userToken}` },
       });
       setData(response.data.products || []);

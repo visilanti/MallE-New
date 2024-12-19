@@ -8,7 +8,7 @@ import {
   ScrollView,
 } from 'react-native';
 
-import Icon from 'react-native-vector-icons/FontAwesome6';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import {fonts} from '../../assets/fonts';
 
 const generateRatingStars = stars => {

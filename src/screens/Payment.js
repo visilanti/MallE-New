@@ -23,7 +23,7 @@ const CheckoutScreen = ({ route, navigation }) => {
     try {
       const userToken = await AsyncStorage.getItem('userToken'); // Ambil token user dari storage
       const id_buyer = await AsyncStorage.getItem('uid'); // Ambil UID user aktif
-      const apiURL = 'http://192.168.43.251:4000/api/transactions/';
+      const apiURL = 'https://backend-malle.vercel.app/api/transactions/';
 
       const transactionData = {
         id_product: item._id, // id produk dari item yang dipilih

@@ -17,7 +17,7 @@ const MyPurchaseTab = ({ navigation }) => {
         }
 
         // Fetch transactions
-        const response = await axios.get('http://192.168.43.251:4000/api/transactions/my-purchases', {
+        const response = await axios.get('https://backend-malle.vercel.app/api/transactions/my-purchases', {
           headers: { Authorization: `Bearer ${userToken}` },
         });
 
@@ -33,7 +33,7 @@ const MyPurchaseTab = ({ navigation }) => {
         const updatedTransactions = await Promise.all(
           transactions.map(async (transaction) => {
             try {
-              const productResponse = await axios.get(`http://192.168.43.251:4000/api/products/${transaction.id_product}`, {
+              const productResponse = await axios.get(`https://backend-malle.vercel.app/api/products/${transaction.id_product}`, {
                 headers: { Authorization: `Bearer ${userToken}` },
               });
 

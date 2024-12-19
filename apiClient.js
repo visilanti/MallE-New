@@ -3,7 +3,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // Konfigurasi baseURL dari backend
 const apiClient = axios.create({
-  baseURL: 'http://192.168.43.251:4000/api', //
+  baseURL: 'https://backend-malle.vercel.app/api',
 });
 
 // Tambahkan interceptor untuk menyisipkan token di header Authorization

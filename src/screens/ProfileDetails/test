@@ -29,7 +29,7 @@
 //
 //      // Fetch transactions
 //      const response = await axios.get(
-//        "http://192.168.43.251:4000/api/transactions/my-purchases",
+//        "https://backend-malle.vercel.app/api/transactions/my-purchases",
 //        {
 //          headers: { Authorization: `Bearer ${userToken}` },
 //        }
@@ -48,7 +48,7 @@
 //        transactions.map(async (transaction) => {
 //          try {
 //            const productResponse = await axios.get(
-//              `http://192.168.43.251:4000/api/products/${transaction.id_product}`,
+//              `https://backend-malle.vercel.app/api/products/${transaction.id_product}`,
 //              {
 //                headers: { Authorization: `Bearer ${userToken}` },
 //              }
@@ -92,7 +92,7 @@
 //
 //  try {
 //    const response = await axios.put(
-//      "http://192.168.43.251:4000/api/transactions/update-order-status",
+//      "https://backend-malle.vercel.app/api/transactions/update-order-status",
 //      { orderId: id, status: "selesai" },
 //      {
 //        headers: { Authorization: `Bearer ${userToken}` },
@@ -126,7 +126,7 @@
 //
 //    try {
 //      const response = await axios.put(
-//        "http://192.168.43.251:4000/api/transactions/update-order-status",
+//        "https://backend-malle.vercel.app/api/transactions/update-order-status",
 //        { orderId: id, status: "dibatalkan" },
 //        {
 //          headers: {
@@ -310,7 +310,7 @@
 //            keyExtractor={(item) => item._id}
 //          />
 //        )
-//      ) : (
+//      ) :                                                                                        (
 //        <View style={styles.emptyState}>
 //          <Text style={styles.emptyText}>Tidak ada data penjualan</Text>
 //        </View>

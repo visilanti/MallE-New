@@ -10,7 +10,7 @@ import {
   ScrollView,
   Alert,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome6';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import { getAuth, signOut, onAuthStateChanged } from 'firebase/auth';
 import { launchImageLibrary } from 'react-native-image-picker';
 import axios from 'axios';
@@ -30,7 +30,7 @@ const SettingUser = ({ navigation }) => {
   const fetchUserData = async (user, token) => {
     try {
       const response = await axios.get(
-        `http://192.168.43.251:4000/api/users/${user.uid}`,
+        `https://backend-malle.vercel.app/api/users/${user.uid}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -51,7 +51,7 @@ const SettingUser = ({ navigation }) => {
 
        try {
          const response = await axios.get(
-           `http://192.168.43.251:4000/api/users/${user.uid}`,
+           `https://backend-malle.vercel.app/api/users/${user.uid}`,
            {
              headers: { Authorization: `Bearer ${token}` },
            }
@@ -129,7 +129,7 @@ const SettingUser = ({ navigation }) => {
       }
 
       await axios.put(
-        `http://192.168.43.251:4000/api/users/${userData.uid}`,
+        `https://backend-malle.vercel.app/api/users/${userData.uid}`,
         formData,
         {
           headers: {

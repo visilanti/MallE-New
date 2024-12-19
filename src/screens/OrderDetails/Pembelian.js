@@ -20,7 +20,7 @@ const Pembelian = ({ navigation }) => {
 
       // Fetch transactions
       const response = await axios.get(
-        "http://192.168.43.251:4000/api/transactions/my-purchases",
+        "https://backend-malle.vercel.app/api/transactions/my-purchases",
         {
           headers: { Authorization: `Bearer ${userToken}` },
         }
@@ -39,7 +39,7 @@ const Pembelian = ({ navigation }) => {
         transactions.map(async (transaction) => {
           try {
             const productResponse = await axios.get(
-              `http://192.168.43.251:4000/api/products/${transaction.id_product}`,
+              `https://backend-malle.vercel.app/api/products/${transaction.id_product}`,
               {
                 headers: { Authorization: `Bearer ${userToken}` },
               }
@@ -84,7 +84,7 @@ const Pembelian = ({ navigation }) => {
 
     try {
       const response = await axios.put(
-        "http://192.168.43.251:4000/api/transactions/update-order-status",
+        "https://backend-malle.vercel.app/api/transactions/update-order-status",
         { orderId: id, status: "selesai" },
         {
           headers: { Authorization: `Bearer ${userToken}` },
@@ -114,7 +114,7 @@ const Pembelian = ({ navigation }) => {
 
     try {
       const response = await axios.put(
-        "http://192.168.43.251:4000/api/transactions/update-order-status",
+        "https://backend-malle.vercel.app/api/transactions/update-order-status",
         { orderId: id, status: "dibatalkan" },
         {
           headers: {
@@ -154,7 +154,7 @@ const Pembelian = ({ navigation }) => {
 
       // Send the updated rating to the backend using axios
       const response = await axios.put(
-        "http://192.168.43.251:4000/api/products/update-rating",
+        "https://backend-malle.vercel.app/api/products/update-rating",
         { _id: id, stars: value },
         {
           headers: {

@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome6';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 import { fonts } from '../../assets/fonts';
@@ -48,7 +48,7 @@ const ProfileDetails = ({ navigation }) => {
 
         try {
           const response = await axios.get(
-            `http://192.168.43.251:4000/api/users/${user.uid}`,
+            `https://backend-malle.vercel.app/api/users/${user.uid}`,
             {
               headers: { Authorization: `Bearer ${token}` },
             }
@@ -80,7 +80,7 @@ const ProfileDetails = ({ navigation }) => {
 
       {/* Header */}
       <TouchableOpacity style={styles.header} onPress={() => navigation.pop()}>
-        <Icon name="angle-left" size={25} color="#3E3E40" />
+        <Icon name="angle-left" size={30} color="#3E3E40" />
       </TouchableOpacity>
 
       {/* Profile Picture */}
@@ -95,7 +95,7 @@ const ProfileDetails = ({ navigation }) => {
         <TouchableOpacity
           style={styles.button}
           onPress={() => navigation.navigate('OrderDetail')}>
-          <Icon name="clipboard-list" size={30} color="#FFFFFF" />
+          <Icon name="clipboard" size={30} color="#FFFFFF" />
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.button}
@@ -105,7 +105,7 @@ const ProfileDetails = ({ navigation }) => {
         <TouchableOpacity
           style={styles.plus}
           onPress={() => navigation.navigate('AddCollection')}>
-          <Icon name="plus" size={30} color="#000000" />
+          <Icon name="plus" size={30} color="#3E3E40" />
         </TouchableOpacity>
       </View>
 
